@@ -20,6 +20,10 @@ class FieldServiceProvider extends ServiceProvider
             // Nova::script("nova-gutenberg-moment", "https://unpkg.com/moment@2.22.1/min/moment.min.js");
             Nova::script("nova-gutenberg-jquery", "https://code.jquery.com/jquery-1.12.4.min.js");
             Nova::script("nova-gutenberg-laraberg", base_path("vendor/van-ons/laraberg/public/js/laraberg.js"));
+            
+            if(file_exists(base_path("resources/nova-gutenberg/custom.js"))){
+                Nova::script("nova-gutenberg-laraberg-custom", base_path("resources/nova-gutenberg/custom.js"));
+            }
 
             Nova::style('nova-gutenberg', __DIR__ . '/../dist/css/field.css');
             Nova::style('nova-gutenberg-laraberg', base_path("vendor/van-ons/laraberg/public/css/laraberg.css"));
