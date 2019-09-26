@@ -14,7 +14,7 @@
         }
     ],
     "require": {
-        "laravel/nova": "2.*",
+        "laravel/nova": "*",
         "symfony/thanks": "*",
         "unisharp/laravel-filemanager": "*",
         "van-ons/laraberg": "v0.0.6-beta"
